@@ -1,5 +1,4 @@
 module "network" {
-  version      = "0.2.1"
   source       = "./modules/network"
   project_name = var.project_name
   region       = var.region
@@ -16,7 +15,6 @@ module "network" {
 }
 
 module "repository" {
-  version       = "0.0.1"
   source        = "./modules/repository"
   project_name  = var.project_name
   region        = var.region
@@ -24,7 +22,6 @@ module "repository" {
 }
 
 module "cloud_run" {
-  version       = "0.1.1"
   source        = "./modules/cloud_run"
   region        = var.region
   project_name  = var.project_name
@@ -45,7 +42,6 @@ module "cloud_run" {
 }
 
 module "compute_engine" {
-  version      = "0.3.2"
   source       = "./modules/compute_engine"
   zone         = var.zone
   project_name = var.project_name
@@ -57,7 +53,6 @@ module "compute_engine" {
 }
 
 module "cloud_build" {
-  version = "0.1.2"
   source  = "./modules/cloud_build"
   region  = var.region
 
